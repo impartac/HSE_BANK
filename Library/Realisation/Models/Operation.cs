@@ -10,6 +10,7 @@ namespace Library.Realisation.Models
 {
     public class Operation : IOperation
     {
+        public Operation() { }  
 
         public Operation(Guid from, Guid to, Guid categoryId, float amount)
         {
