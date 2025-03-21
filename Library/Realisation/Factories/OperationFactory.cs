@@ -11,13 +11,13 @@ namespace Library.Realisation.Factories
     public class OperationFactory : IOperationFactory<Operation>
     {
         public OperationFactory() { }
-        public Operation Create(Guid id, BankAccount from, BankAccount to, Category category, float amount)
+        public Operation Create(BankAccount from, BankAccount to, Category category, float amount)
         {
-            return new Operation(id, from.Id, to.Id, category.Id, amount);
+            return new Operation(from.Id, to.Id, category.Id, amount);
         }
-        public Operation Create(Guid id, Guid from, Guid to, Guid categoryId, float amount)
+        public Operation Create(Guid from, Guid to, Guid categoryId, float amount)
         {
-            return new Operation(id, from, to, categoryId, amount);
+            return new Operation(from, to, categoryId, amount);
         }
     }
 }

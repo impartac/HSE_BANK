@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -11,9 +12,11 @@ namespace Library.Realisation.MenuFacade
     {
         Import,
         Export,
-        Statistic,
         Analysis,
         ProcessData,
+        Create,
+        Update,
+        Delete,
         Exit
     }
     public enum InstanceType
@@ -48,7 +51,7 @@ namespace Library.Realisation.MenuFacade
                 try
                 {
                     int val = (int)action - 49;
-                    if (0 <= val  && val < 6) 
+                    if (0 <= val  && val < 8) 
                     {
                         return (ActionType)val;
                     }
@@ -120,5 +123,54 @@ namespace Library.Realisation.MenuFacade
             _menu.FileErrorResponse();
         }
 
+        public string GetName() 
+        {
+            _menu.NameRequest();
+            return Console.ReadLine();
+        }
+
+
+        public Guid GetGuid(string field)
+        {
+            _menu.GuidRequest(field);
+            string input = Console.ReadLine();
+            Guid guid = Guid.Empty;
+            while (!Guid.TryParse(input, out guid)) 
+            {
+                _menu.WrongGuidResponse();
+                input = Console.ReadLine();
+            }
+            return guid;
+        }
+
+        public float GetFloat(string field) 
+        {
+            _menu.FloatRequest(field);
+            string input = Console.ReadLine();
+            float amount = 0;
+            while (!float.TryParse(input, out amount))
+            {
+                _menu.WrongAmountResponse();
+                input = Console.ReadLine();
+            }
+            return amount;
+        }
+        public void WrongOperation() 
+        {
+            _menu.WrongOperationResponse();
+        }
+
+        public void WrongGuid() 
+        {
+            _menu.WrongGuidResponse();
+        }
+        public void CreateString(Guid id) 
+        {
+            _menu.CreateString(id);
+        }
+        public void SendOK() 
+        {
+            _menu.StringRequest();
+        }
     }
 }

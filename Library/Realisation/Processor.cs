@@ -17,7 +17,7 @@ namespace Library.Realisation
         {
             foreach (var operation in operations)
             {
-                if (accounts[operation.From] == null || accounts[operation.To] == null)
+                if (accounts[operation.From] == null || accounts[operation.To] == null || operation.IsProcessed)
                     continue;
                 else
                 {

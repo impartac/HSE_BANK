@@ -22,10 +22,12 @@ namespace Library.Realisation.MenuFacade
             Console.WriteLine("Main Menu:");
             Console.WriteLine("1. Import");
             Console.WriteLine("2. Export");
-            Console.WriteLine("3. Statistics");
-            Console.WriteLine("4. Analysis");
-            Console.WriteLine("5. Process Data");
-            Console.WriteLine("6. Exit");
+            Console.WriteLine("3. Analysis");
+            Console.WriteLine("4. Process Data");
+            Console.WriteLine("5. Create");
+            Console.WriteLine("6. Update");
+            Console.WriteLine("7. Delete");
+            Console.WriteLine("8. Exit");
         }
         public void WrongCommand()
         {
@@ -55,6 +57,41 @@ namespace Library.Realisation.MenuFacade
         public void FileErrorResponse()
         {
             Console.WriteLine("There is an exception. while reading file.");
+        }
+
+        public void NameRequest() 
+        {
+            Console.WriteLine("Write Name");
+        }
+        public void GuidRequest(string field) 
+        {
+            Console.WriteLine($"Write GUID for {field}");
+        }
+        public void WrongGuidResponse() 
+        {
+            Console.WriteLine("Wrong GUID. Try again");
+        }
+
+        public void FloatRequest(string field)
+        {
+            Console.WriteLine($"Write float {field}");
+        }
+        public void WrongAmountResponse()
+        {
+            Console.WriteLine("Wrong float. Try again");
+        }
+        public void WrongOperationResponse() 
+        {
+            Console.WriteLine("Wrong operation");
+        }
+        public void CreateString(Guid id) 
+        {
+            Console.WriteLine($"Created. Id = {id}");
+        }
+
+        public void StringRequest()
+        {
+            Console.WriteLine("OK");
         }
     }
 }

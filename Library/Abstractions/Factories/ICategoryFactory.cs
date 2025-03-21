@@ -9,5 +9,6 @@ namespace Library.Abstractions.Factories
 {
     public abstract class ICategoryFactory<ICategory> : IFactory
     {
+        public abstract ICategory Create(string name);
     }
 }

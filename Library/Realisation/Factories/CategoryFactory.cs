@@ -11,7 +11,7 @@ namespace Library.Realisation.Factories
     public class CategoryFactory : ICategoryFactory<Category>
     {
         public CategoryFactory() { }
-        public Category Create(string name) 
+        public override  Category Create(string name) 
         {
             return new Category(name);
         }

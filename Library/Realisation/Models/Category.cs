@@ -10,8 +10,6 @@ namespace Library.Realisation.Models
 {
     public class Category : ICategory
     {
-        public string Name { get; set; }
-
         public Category(string name)
         {
             Id = Guid.NewGuid();

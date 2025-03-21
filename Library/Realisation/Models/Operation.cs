@@ -11,9 +11,9 @@ namespace Library.Realisation.Models
     public class Operation : IOperation
     {
 
-        public Operation(Guid id, Guid from, Guid to, Guid categoryId, float amount)
+        public Operation(Guid from, Guid to, Guid categoryId, float amount)
         {
-            Id = id;
+            Id = new Guid();
             From = from;
             To = to;
             CategoryId = categoryId;

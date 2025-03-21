@@ -26,9 +26,9 @@ public class Settings
         // services.AddSingleton<IGrouperBy, GrouperBy>();
 
         // Регистрация сервисов для Factories
-        services.AddSingleton<IFactory, AccountFactory>();
-        services.AddSingleton<IFactory, OperationFactory>();
-        services.AddSingleton<IFactory, CategoryFactory>();
+        services.AddSingleton<AccountFactory>();
+        services.AddSingleton<OperationFactory>();
+        services.AddSingleton<CategoryFactory>();
 
         // Регистрация сервисов для Models
         services.AddTransient<IBankAccount, BankAccount>();
@@ -40,8 +40,8 @@ public class Settings
         services.AddSingleton<OperationStorage<Operation>>();
         services.AddSingleton<CategoryStorage<Category>>();
 
-        // Регистрация сервисов для Realisation
-        services.AddSingleton<IAnalyticsFacade, AnalyticsFacade>();
+        // Analytics
+        services.AddSingleton<AnalyticsFacade>();
         // services.AddSingleton<GroupedBy>();
 
         // Menu
