@@ -1,0 +1,42 @@
+[
+  {
+    "Id": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
+    "Name": "Category1"
+  },
+  {
+    "Id": "3fa85f64-5717-4562-b3fc-2c963f66afb9",
+    "Name": "Category2"
+  },
+  {
+    "Id": "3fa85f64-5717-4562-b3fc-2c963f66afbc",
+    "Name": "Category3"
+  },
+  {
+    "Id": "3fa85f64-5717-4562-b3fc-2c963f66afbf",
+    "Name": "Category4"
+  },
+  {
+    "Id": "3fa85f64-5717-4562-b3fc-2c963f66afc2",
+    "Name": "Category5"
+  },
+  {
+    "Id": "3fa85f64-5717-4562-b3fc-2c963f66afc5",
+    "Name": "Category6"
+  },
+  {
+    "Id": "3fa85f64-5717-4562-b3fc-2c963f66afc8",
+    "Name": "Category7"
+  },
+  {
+    "Id": "3fa85f64-5717-4562-b3fc-2c963f66afcb",
+    "Name": "Category8"
+  },
+  {
+    "Id": "3fa85f64-5717-4562-b3fc-2c963f66afce",
+    "Name": "Category9"
+  },
+  {
+    "Id": "3fa85f64-5717-4562-b3fc-2c963f66afd1",
+    "Name": "Category10"
+  }
+]
